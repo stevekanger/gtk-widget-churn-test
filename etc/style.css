@@ -1,0 +1,27 @@
+#bar {
+  padding: 10px;
+}
+
+box {
+  padding: 10px;
+}
+
+#box-left {
+  background: green;
+}
+
+#box-center {
+  background: black;
+}
+
+#box-right {
+  background: blue;
+}
+
+.tab {
+  background: purple;
+}
+
+.tab.focused {
+  background: black;
+}

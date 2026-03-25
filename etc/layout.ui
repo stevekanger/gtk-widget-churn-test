@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkWindow" id="main_window">
+    <child>
+      <object class="GtkBox" id="bar">
+        <property name="name">bar</property>
+        <property name="orientation">horizontal</property>
+        <child>
+          <object class="GtkBox" id="box_left">
+            <property name="name">box-left</property>
+            <property name="orientation">horizontal</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox" id="box_right">
+            <property name="name">box-right</property>
+            <property name="orientation">horizontal</property>
+            <property name="hexpand">True</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
