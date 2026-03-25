@@ -139,8 +139,6 @@ static void gwc_tab_init(GwcTab *self) {
 
     gtk_widget_add_controller(GTK_WIDGET(self), GTK_EVENT_CONTROLLER(gesture));
     g_signal_connect(gesture, "pressed", G_CALLBACK(handle_click), self);
-
-    gtk_widget_add_css_class(GTK_WIDGET(self), "tab");
 }
 
 static void gwc_tab_finalize(GObject *object) {
@@ -174,7 +172,7 @@ GtkWidget *gwc_tab_new(
     const gchar *ws_name,
     int focused
 ) {
-    GwcTab *self = g_object_new(CUSTOM_TAB_TYPE, "label", name, NULL);
+    GwcTab *self = g_object_new(GWC_TAB_TYPE, "label", name, NULL);
 
     self->id = id;
     self->name = g_strdup(name);

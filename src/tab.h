@@ -13,7 +13,7 @@ struct _GwcTab {
 
 G_BEGIN_DECLS
 
-#define CUSTOM_TAB_TYPE (gwc_tab_get_type())
+#define GWC_TAB_TYPE (gwc_tab_get_type())
 G_DECLARE_FINAL_TYPE(GwcTab, gwc_tab, GWC, TAB, GtkButton)
 
 GtkWidget *gwc_tab_new(
