@@ -127,10 +127,10 @@ static void gwc_tab_init(GwcTab *self) {
     GtkGesture *gesture = gtk_gesture_click_new();
     gtk_gesture_single_set_button(GTK_GESTURE_SINGLE(gesture), 0);
 
-    gtk_event_controller_set_propagation_phase(
-        GTK_EVENT_CONTROLLER(gesture),
-        GTK_PHASE_CAPTURE
-    );
+    // gtk_event_controller_set_propagation_phase(
+    //     GTK_EVENT_CONTROLLER(gesture),
+    //     GTK_PHASE_CAPTURE
+    // );
 
     gtk_widget_add_controller(GTK_WIDGET(self), GTK_EVENT_CONTROLLER(gesture));
     g_signal_connect(gesture, "pressed", G_CALLBACK(handle_click), self);
@@ -182,7 +182,7 @@ GtkWidget *gwc_tab_new(int id, int focused, gchar *name) {
     self->label = gtk_label_new(self->name);
     gtk_widget_set_parent(self->label, GTK_WIDGET(self));
 
-    // Comment out the classes to stop memory increases
+    // Comment out this next line to stop memory increases
     gtk_widget_add_css_class(GTK_WIDGET(self), "tab");
 
     if (self->focused) {
