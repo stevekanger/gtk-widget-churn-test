@@ -2,27 +2,20 @@
 #include <gtk/gtk.h>
 
 struct _GwcTab {
-    GtkButton parent_instance;
+    GtkWidget parent_instance;
 
+    GtkWidget *label;
     int id;
-    gchar *name;
-    gchar *app_id;
-    gchar *ws_name;
     int focused;
+    gchar *name
 };
 
 G_BEGIN_DECLS
 
 #define GWC_TAB_TYPE (gwc_tab_get_type())
-G_DECLARE_FINAL_TYPE(GwcTab, gwc_tab, GWC, TAB, GtkButton)
+G_DECLARE_FINAL_TYPE(GwcTab, gwc_tab, GWC, TAB, GtkWidget)
 
-GtkWidget *gwc_tab_new(
-    const int id,
-    const gchar *name,
-    const gchar *app_id,
-    const gchar *ws_name,
-    int focused
-);
+GtkWidget *gwc_tab_new(const int id, int focused, gchar *name);
 
 GtkWidget *create_control(GtkBuilder *builder);
 

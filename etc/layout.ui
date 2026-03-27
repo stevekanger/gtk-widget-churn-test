@@ -16,6 +16,9 @@
             <property name="name">box-right</property>
             <property name="orientation">horizontal</property>
             <property name="hexpand">True</property>
+            <style>
+              <class name="tabs"/>
+            </style>
           </object>
         </child>
       </object>

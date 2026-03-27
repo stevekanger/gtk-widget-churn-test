@@ -20,8 +20,11 @@ box {
 
 .tab {
   background: purple;
+  padding: 10px;
+  border-radius: 3px;
+  margin: 0 1px;
 }
 
-.tab.focused {
+.focused {
   background: black;
 }

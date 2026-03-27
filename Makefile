@@ -1,5 +1,5 @@
 CC = gcc
-PKGS = gtk4 gtk4-layer-shell-0
+PKGS = gtk4
 CFLAGS = $(shell pkg-config --cflags $(PKGS)) -Wall -Wextra -std=c99 -g
 LIBS = $(shell pkg-config --libs $(PKGS))
 SRC_DIR = src

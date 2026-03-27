@@ -1,9 +1,45 @@
 [
   {
+    "file": "src/app.c",
+    "arguments": [
+      "gcc",
+      "-I/usr/include/gtk-4.0",
+      "-I/usr/include/pango-1.0",
+      "-I/usr/include/fribidi",
+      "-I/usr/include/harfbuzz",
+      "-I/usr/include/gdk-pixbuf-2.0",
+      "-I/usr/include/glycin-2",
+      "-I/usr/include/cairo",
+      "-I/usr/include/freetype2",
+      "-I/usr/include/libpng16",
+      "-I/usr/include/pixman-1",
+      "-I/usr/include/graphene-1.0",
+      "-I/usr/lib/graphene-1.0/include",
+      "-mfpmath=sse",
+      "-msse",
+      "-msse2",
+      "-I/usr/include/glib-2.0",
+      "-I/usr/lib/glib-2.0/include",
+      "-I/usr/include/libmount",
+      "-I/usr/include/blkid",
+      "-I/usr/include/sysprof-6",
+      "-pthread",
+      "-Wall",
+      "-Wextra",
+      "-std=c99",
+      "-g",
+      "-c",
+      "-o",
+      "build/app.o",
+      "src/app.c"
+    ],
+    "directory": "/mnt/Storage/Development/c/testing/gtk-widget-churn-test",
+    "output": "build/app.o"
+  },
+  {
     "file": "src/main.c",
     "arguments": [
       "gcc",
-      "-I/usr/include/gtk4-layer-shell",
       "-I/usr/include/gtk-4.0",
       "-I/usr/include/pango-1.0",
       "-I/usr/include/fribidi",
@@ -34,14 +70,13 @@
       "build/main.o",
       "src/main.c"
     ],
-    "directory": "/mnt/Storage/Development/c/testing/gtk-widget-churn",
+    "directory": "/mnt/Storage/Development/c/testing/gtk-widget-churn-test",
     "output": "build/main.o"
   },
   {
     "file": "src/tab.c",
     "arguments": [
       "gcc",
-      "-I/usr/include/gtk4-layer-shell",
       "-I/usr/include/gtk-4.0",
       "-I/usr/include/pango-1.0",
       "-I/usr/include/fribidi",
@@ -72,7 +107,7 @@
       "build/tab.o",
       "src/tab.c"
     ],
-    "directory": "/mnt/Storage/Development/c/testing/gtk-widget-churn",
+    "directory": "/mnt/Storage/Development/c/testing/gtk-widget-churn-test",
     "output": "build/tab.o"
   }
 ]

@@ -1,6 +1,5 @@
 #include "app.h"
 #include "tab.h"
-#include <gtk-layer-shell/gtk-layer-shell.h>
 
 G_DEFINE_TYPE(GwcApp, gwc_app, GTK_TYPE_APPLICATION)
 
@@ -29,13 +28,7 @@ static void activate(GApplication *app) {
     // Associate window with the application
     gtk_window_set_application(window, GTK_APPLICATION(app));
 
-    // gtk-layer-shell setup
-    gtk_layer_init_for_window(window);
-    gtk_layer_set_layer(window, GTK_LAYER_SHELL_LAYER_TOP);
-    gtk_layer_set_namespace(window, "gwc-bar");
-    gtk_layer_set_anchor(window, GTK_LAYER_SHELL_EDGE_TOP, TRUE);
-    gtk_layer_set_anchor(window, GTK_LAYER_SHELL_EDGE_LEFT, TRUE);
-    gtk_layer_set_anchor(window, GTK_LAYER_SHELL_EDGE_RIGHT, TRUE);
+    gtk_window_set_default_size(GTK_WINDOW(window), 600, 200);
 
     gtk_window_present(window);
 
@@ -51,7 +44,7 @@ static void activate(GApplication *app) {
     GtkWidget *box_right =
         GTK_WIDGET(gtk_builder_get_object(gwc->builder, "box_right"));
 
-    GtkWidget *tab1 = gwc_tab_new(1, "Starting Tab", "app_id 1", "ws_1", TRUE);
+    GtkWidget *tab1 = gwc_tab_new(1, FALSE, "Starter Tab");
 
     gtk_box_append(GTK_BOX(box_right), tab1);
 }
